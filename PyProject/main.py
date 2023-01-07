@@ -1,16 +1,12 @@
-# This is a sample Python script.
+import numpy as np
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+X = np.random.randint(4, 6, size=(10,3))
+print(X)
 
+arr, uniq_cnt = np.unique(X, axis=0, return_counts=True)
+uniq_arr = arr[uniq_cnt==1]
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+print(arr)
+print(uniq_cnt)
+print(uniq_arr)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
